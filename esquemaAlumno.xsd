@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:simpleType name="dni">
+    <xsd:element name="dni">
+        <xsd:simpleType>
+            <xsd:restriction  base="xsd:integer">
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="direccion">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="calle" type="xsd:string"/>
+                <xsd:element name="numero" type="xsd:integer"/>
+                <xsd:element name="ciudad" type="xsd:string"/>
+                <xsd:element name="provincia" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="telefono">
         <xsd:restriction base="xsd:integer">
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="nombre">
-        <xsd:restriction base="xsd:string">
-        </xsd:restriction>
-    </xsd:simpleType>
+    <xsd:element name="alumno">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="dni" maxOccurs="1"/>
+				<xsd:element name="nombre"  maxOccurs="1"/>
+				<xsd:element name="direccion"  maxOccurs="1"/>
+				<xsd:element name="telefono"  maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 
-    
 </xsd:schema>
