@@ -26,10 +26,10 @@
     <xsd:element name="alumno">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="dni" maxOccurs="1"/>
-				<xsd:element name="nombre"  maxOccurs="1"/>
-				<xsd:element name="direccion"  maxOccurs="1"/>
-				<xsd:element name="telefono"  maxOccurs="1"/>
+                <xsd:element name="dni" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="nombre" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="direccion" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="telefono" minOccurs="1" maxOccurs="1"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
